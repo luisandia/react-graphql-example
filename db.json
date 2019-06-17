@@ -1,34 +1,34 @@
 {
-    "users": [
-        {
-            "id": "23",
-            "firstName": "Juan",
-            "age": 20,
-            "companyId": "1"
-        },
-        {
-            "id": "40",
-            "firstName": "Huver",
-            "age": 50,
-            "companyId": "2"
-        },
-        {
-            "id": "41",
-            "firstName": "Roberto",
-            "age": 12,
-            "companyId": "2"
-        }
-    ],
-    "companies": [
-        {
-            "id": "1",
-            "name": "Apple",
-            "description": "iphone"
-        },
-        {
-            "id": "2",
-            "name": "Huawei",
-            "description": "chinos"
-        }
-    ]
+  "users": [
+    {
+      "id": "23",
+      "firstName": "Juan",
+      "age": 20,
+      "companyId": "1"
+    },
+    {
+      "id": "40",
+      "firstName": "Huver",
+      "age": 50,
+      "companyId": "2"
+    },
+    {
+      "id": "41",
+      "firstName": "Roberto",
+      "age": 12,
+      "companyId": "2"
+    }
+  ],
+  "companies": [
+    {
+      "id": "1",
+      "name": "Apple",
+      "description": "iphone"
+    },
+    {
+      "id": "2",
+      "name": "Huawei",
+      "description": "chinos"
+    }
+  ]
 }
