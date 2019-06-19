@@ -10,7 +10,7 @@ class SongDetail extends Component {
     render() {
         const { song } = this.props.data;
         if (!song) {
-            return <div>Loading...</div>;
+            return <div>Loading song detail...</div>;
         }
         return (
             <div>

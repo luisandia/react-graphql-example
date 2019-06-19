@@ -19,9 +19,8 @@ class LyricCreate extends Component {
                 content: this.state.content,
                 songId: this.props.songId
             }
-        }).then(() => this.setState({ content: '' }));
+        }).then(() => {console.log('finish'); this.setState({ content: '' }) }).catch((e) => { console.error(e) });
     }
-
     render() {
         return (
             <form onSubmit={this.onSubmit.bind(this)}>
@@ -37,9 +36,12 @@ mutation AddLyricToSong($content:String,$songId:ID){
     addLyricToSong(content:$content,songId:$songId){
         id
         lyrics {
+            id
             content
+            likes
         }
     }
 }
 `;
+
 export default graphql(mutation)(LyricCreate);
