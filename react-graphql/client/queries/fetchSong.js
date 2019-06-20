@@ -9,6 +9,7 @@ query SongQuery($id:ID!){
       lyrics{
           id
           content
+          likes
       }
     }
   }`;
