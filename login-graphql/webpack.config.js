@@ -5,7 +5,11 @@ module.exports = {
   entry: './client/index.js',
   output: {
     path: '/',
-    filename: 'bundle.js'
+    filename: 'bundle.js',
+    publicPath: '/',
+  },
+    devServer: {
+    historyApiFallback: true
   },
   module: {
     rules: [
