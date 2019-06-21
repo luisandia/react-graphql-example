@@ -8,6 +8,7 @@ import { InMemoryCache } from 'apollo-cache-inmemory';
 import { HttpLink, createHttpLink } from 'apollo-link-http';
 import { BrowserRouter as Router, Route, hashHistory, browserHistory,Switch ,HashRouter} from 'react-router-dom'
 import LoginForm from './components/LoginForm';
+import SignupForm  from './components/SignupForm';
 
 const cache = new InMemoryCache();
 const link = new HttpLink({
@@ -28,6 +29,7 @@ const Root = () => {
                 <App>
                     <Switch>
                         <Route path="/login" component={LoginForm} />
+                        <Route path="/signup" component={SignupForm} />
                     </Switch>
                 </App>
             </HashRouter>
