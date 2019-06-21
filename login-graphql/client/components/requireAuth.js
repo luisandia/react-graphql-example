@@ -7,6 +7,7 @@ export default (WrappedComponent) => {
     class requireAuth extends Component {
 
         componentWillUpdate(nextProps) {
+            console.log(nextProps.data)
             if (!nextProps.data.loading && !nextProps.data.user) {
                 this.props.history.push('/login');
             }

@@ -8,6 +8,7 @@ const RootQueryType = new GraphQLObjectType({
     user: {
       type: UserType,
       resolve(parentValuem, args, req) {
+        req.session.userQuery++;//store in mongodb session
         return req.user;
       }
     }
