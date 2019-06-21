@@ -3,13 +3,21 @@ import AuthForm from './AuthForm';
 import mutate from '../mutations/Login';
 import { graphql } from 'react-apollo'
 import query from '../queries/CurrentUser';
-
 class LoginForm extends Component {
 
     constructor(props) {
         super(props)
         this.state = {
             errors: []
+        }
+    }
+
+    componentWillUpdate(nextProps) {
+        // this.props;// the old current set of props
+        // nextProps // athe next sets of props that will be in place when components rerenderers
+        if (!this.props.data.user && nextProps.data.user) {
+            //redirect to dashboard
+            this.props.history.push('/dashboard');
         }
     }
 

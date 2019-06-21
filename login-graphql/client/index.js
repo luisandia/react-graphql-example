@@ -9,6 +9,8 @@ import { HttpLink, createHttpLink } from 'apollo-link-http';
 import { BrowserRouter as Router, Route, hashHistory, browserHistory,Switch ,HashRouter} from 'react-router-dom'
 import LoginForm from './components/LoginForm';
 import SignupForm  from './components/SignupForm';
+import Dashboard from './components/Dashboard';
+import requireAuth from './components/requireAuth';
 
 const cache = new InMemoryCache();
 const link = new HttpLink({
@@ -30,6 +32,7 @@ const Root = () => {
                     <Switch>
                         <Route path="/login" component={LoginForm} />
                         <Route path="/signup" component={SignupForm} />
+                        <Route path="/dashboard" component={requireAuth(Dashboard)} />
                     </Switch>
                 </App>
             </HashRouter>
